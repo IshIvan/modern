@@ -1,0 +1,12 @@
+.without-border {
+    border: none !important;
+}
+
+.without-background {
+    background-color: transparent !important;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}

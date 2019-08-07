@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Модерн сборка</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +26,287 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Modern</h1>
+					<h3>80% пользователей вдохнут полной грудью</h3>
+					<br>
+					<p>
+						<small>Ишмаметьев Иван <br> <a href="#">SME Core</a></small>
+					</p>
+				</section>
+				<section>
+					<h2>🤔</h2> О чём доклад?
+				</section>
+				<section>
+					<h4>Вы узнаете</h4>
+					<ul>
+						<li class="fragment">о проблеме больших бандлов</li>
+						<li class="fragment">как её решить в Angular</li>
+						<li class="fragment">почему это не подошло нам</li>
+						<li class="fragment">наше решение</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Проблема</h4>
+					<img src="./images/caniuse.png" alt="">
+				</section>
+				<section>
+					<h4>Наше приложение <a href="">≈ 1 Mb</a></h4>
+					<img width="500" height="500" src="https://media.giphy.com/media/fjxMEdpMT9qDyBVLL4/giphy.gif" alt="">
+				</section>
+				<section>
+					<h3>Modern – это...</h3>
+					<p class="fragment">сборка приложения в ECMAScript 2015</p>
+				</section>
+				<section>
+					<h3>И зачем он мне?</h3>
+					<p class="fragment">80% пользователей перестают страдать</p>
+					<p class="fragment">20% – живут по-прежнему</p>
+				</section>
+				<section>
+					<h3>Результат <a href="#">angular.io</a></h3>
+					<img style="background: white" src="./images/angular.png" alt="">
+				</section>
+				<section>
+					<table>
+						<thead>
+							<th>Filename</th>
+							<th>Legacy</th>
+							<th>Modern</th>
+							<th>%</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fragment without-border"><a href="">main.js</a></td>
+								<td class="fragment without-border">3 Mb</td>
+								<td class="fragment without-border">2.5 Mb</td>
+								<td class="fragment without-border">-17%</td>
+							</tr>
+							<tr>
+								<td class="fragment without-border"><a href="">polyfills.js</a></td>
+								<td class="fragment without-border">350 kb</td>
+								<td class="fragment without-border">50 kb</td>
+								<td class="fragment without-border">-86%</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h3>Коробочное решение</h3>
+				</section>
+				<section>
+					<h3>Тернистый путь Angular</h3>
+					<ol>
+						<li class="fragment">Сборка в <a href="#">ECMAScript5</a></li>
+						<li class="fragment">Сборка в <a href="#">ECMAScript5</a> c полифилами через <a href="#">nomodule</a></li>
+						<li class="fragment">Сборк<b>и</b> на основании <a href="#">browserslist</a></li>
+					</ol>
+				</section>
+				<section>
+					<h4>Поддерживаемые браузеры</h4>
+					<img width="300" style="background: transparent; border: none" src="./images/browserslist.png" alt="">
+				</section>
+				<section>
+					<h4><a href="">Angular differential loading</a></h4>
+					<table>
+						<thead>
+							<th>👏</th>
+							<th>👎</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fragment without-border">0-configuration</td>
+								<td class="fragment without-border">скрытая настройка</td>
+							</tr>
+							<tr class="fragment">
+								<td class="without-border"></td>
+								<td class="without-border">сложно выключить</td>
+							</tr>
+							<tr class="fragment">
+								<td class="without-border"></td>
+								<td class="without-border">условия диктуются</td>
+							</tr>
+							<tr class="fragment">
+								<td class="without-border"></td>
+								<td class="without-border">x2 время сборки</td>
+							</tr>
+							<tr class="fragment">
+								<td class="without-border"></td>
+								<td class="without-border">x2 загрузка nomodule</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h4>nomodule 🙅</h4>
+					<img src="./images/nomodule.png" alt="">
+				</section>
+				<section>
+					<h3>🦄 Своё решение 🚲</h3>
+				</section>
+				<section>
+					<h4>Стек технологий</h4>
+					<div style="text-align: center">
+						<div class="flex-center fragment">
+							<img class="without-border without-background" src="./images/nginx.png" width="40" alt="">
+							<span>Nginx</span>
+						</div>
+						<div class="flex-center fragment">
+							<img class="without-border without-background" src="./images/angular_icon.png" width="40" alt="">
+							<span>Angular</span>
+						</div>
+						<div class="flex-center fragment">
+							<img class="without-border without-background" src="./images/docker.png" width="40" alt="">
+							<span>Docker</span>
+						</div>
+						<div class="flex-center fragment">
+							<img class="without-border without-background" src="./images/teamcity.png" width="40" alt="">
+							<span>CI system name</span>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h4>И началось...</h4>
+					<img class="without-border without-background" src="https://media.giphy.com/media/mCRJDo24UvJMA/giphy.gif" alt="">
+				</section>
+				<section>
+					<h4>Определение браузера</h4>
+					<img class="without-border without-background" src="./images/map_nginx.png" alt="">
+				</section>
+				<section>
+					<h4>Балансировка</h4>
+					<img class="without-border without-background" src="./images/location_nginx.png" alt="">
+				</section>
+				<section>
+					<h4>Сборка</h4>
+					<img class="without-border without-background" src="./images/configuration.png" alt="">
+				</section>
+				<section>
+					<h4><a href="">tsconfig.modern.json</a></h4>
+					<img class="without-border without-background" src="./images/diff_tsconfig.png" alt="">
+				</section>
+				<section>
+					<h4><a href="">package.json</a></h4>
+					<img class="without-border without-background" src="./images/package.png" alt="">
+				</section>
+				<section>
+					<h4><a href="">polyfills.legacy.ts</a></h4>
+					<img class="without-border without-background" width="350" src="./images/polyfills.legacy.png" alt="">
+				</section>
+				<section>
+					<h4>Core команда</h4>
+					<img class="without-border without-background" src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" alt="">
+				</section>
+				<section>
+					<h4><a href="">polyfills.modern.ts</a></h4>
+					<img class="without-border without-background" src="./images/polyfills.modern.png" alt="">
+				</section>
+				<section>
+					<h4><a href="">Dockerfile</a></h4>
+					<img class="without-border without-background" src="./images/diff_docker.png" alt="">
+				</section>
+				<section>
+					<h4><a href="">Не</a> заставляем ждать</h4>
+					<img class="without-border without-background" src="./images/teamcity_parallels.png" alt="">
+				</section>
+				<section>
+					<h4><a href="">SME Modern</a></h4>
+					<table>
+						<thead>
+						<th>👏</th>
+						<th>👎</th>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="fragment without-border">условия диктует бизнес</td>
+							<td class="fragment without-border">легко потерять пользователя</td>
+						</tr>
+						<tr>
+							<td class="fragment without-border">гибкая настройка</td>
+							<td class="fragment without-border">сложно включить</td>
+						</tr>
+						<tr class="fragment">
+							<td class="without-border">параллельная сборка</td>
+							<td class="without-border"></td>
+						</tr>
+						<tr class="fragment">
+							<td class="without-border">одна загрузка</td>
+							<td class="without-border"></td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h2>🤔</h2>
+					<ul>
+						<li class="fragment">одна строка в <a href="">Dockerfile</a></li>
+						<li class="fragment"><a href="">один npm script</a> </li>
+						<li class="fragment"><a href="">один параметр</a> в CI</li>
+						<li class="fragment">копипаста <a href="">*.modern.json</a>, <a href="">index.html</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3 style="text-align: left;"><span style=" color: #b52e31">Angular</span>.io</h3>
+					<h3>vs</h3>
+					<h3 style="text-align: right; color: #ffdd2d">Тинькофф</h3>
+				</section>
+				<section>
+					<table>
+						<thead>
+							<th><span style=" color: #b52e31">Angular</span>.io</th>
+							<th><span style="color: #ffdd2d">Тинькофф</span></th>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="fragment without-border">всегда включен</td>
+							<td class="fragment without-border">сложно включить</td>
+						</tr>
+						<tr>
+							<td class="fragment without-border">нельзя настроить</td>
+							<td class="fragment without-border">любая настройка</td>
+						</tr>
+						<tr class="fragment">
+							<td class="without-border">2х время сборки</td>
+							<td class="without-border">1х время сборка</td>
+						</tr>
+						<tr class="fragment">
+							<td class="without-border">2х вес артефактов</td>
+							<td class="without-border">1х вес артефактов</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<img class="without-border without-background" width="600" src="https://media.giphy.com/media/EimNpKJpihLY4/giphy.gif" alt="">
+				</section>
+				<section>
+					<h4>AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/15.15393</h4>
+					<img class="without-border without-background" width="600" src="https://media.giphy.com/media/DRfu7BT8ZK1uo/giphy.gif" alt="">
+				</section>
+				<section>
+					<h4>AppleWebKit/537.36 (KHTML, like Gecko) <span style="color: red">Chrome/51.0.2704.79</span> Safari/537.36
+						<a href="">Edge/15.15393</a></h4>
+				</section>
+				<section>
+					<h4>Зачем вы <a href="">это</a> послушали?</h4>
+					<ul>
+						<li class="fragment">вспомнили о проблеме</li>
+						<li class="fragment">вспомнили как решить <a href="">за 1 минуту</a></li>
+						<li class="fragment">узнали как решить <a href="">за 1 день</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Спасибо!</h3>
+					<br>
+					<h3>👏👏👏</h3>
+					<br>
+					<br>
+					<small>
+						Ишмаметьев Иван
+						<br>
+						<a href="">i.ishmametyev@tinkoff.ru</a>
+					</small>
+				</section>
 			</div>
 		</div>
 
