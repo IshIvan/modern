@@ -101,7 +101,7 @@
 					<ol>
 						<li class="fragment">Сборка в <a href="#">ECMAScript5</a></li>
 						<li class="fragment">Сборка в <a href="#">ECMAScript5</a> c полифилами через <a href="#">nomodule</a></li>
-						<li class="fragment">Сборк<b>и</b> на основании <a href="#">browserslist</a></li>
+						<li class="fragment">Две сборки на основании <a href="#">browserslist</a></li>
 					</ol>
 				</section>
 
@@ -119,7 +119,7 @@
 					<ul>
 						<li class="fragment"><a href="">Версии:</a> только 7.3</li>
 						<li class="fragment"><a href="">Инструменты:</a> флаг <a href="">--es5BrowserSupport</a></li>
-						<li class="fragment"><a href="">Результат:</a> ваш код и полифиллы</li>
+						<li class="fragment"><a href="">Результат:</a> ваш код и полифилы</li>
 					</ul>
 				</section>
 
@@ -152,28 +152,32 @@
 					<img src="./images/nomodule.png" alt="">
 				</section>
 
-				<section style="margin-top: -100px">
-					<h4>Двойная загрузка</h4>
-					<ol style="margin-left: -100px">
-						<div class="flex-center"><img
-								src="https://upload.wikimedia.org/wikipedia/commons/1/18/Internet_Explorer_10%2B11_logo.svg"
-								class="without-border without-background" style="width: 40px">
-							<div style="width: 30px"></div>
-							<div>IE 11</div>
-						</div>
-						<div class="flex-center"><img
-								src="https://upload.wikimedia.org/wikipedia/commons/5/52/Safari_browser_logo.svg"
-								class="without-border without-background" style="width: 40px">
-							<div style="width: 30px"></div>
-							<div>Safari 10.1</div>
-						</div>
-						<div class="flex-center"><img
-								src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Microsoft_Edge_logo.svg"
-								class="without-border without-background" style="width: 40px">
-							<div style="width: 30px"></div>
-							<div>Edge 17</div>
-						</div>
-					</ol>
+				<section style="margin-top: -50px">
+					<h4><a href="">Двойная загрузка</a></h4>
+					<div style="display:flex; align-items: center">
+						<ol style=" margin-right: 100px">
+							<div class="flex-center"><img
+									src="https://upload.wikimedia.org/wikipedia/commons/1/18/Internet_Explorer_10%2B11_logo.svg"
+									class="without-border without-background" style="width: 40px">
+								<div style="width: 30px"></div>
+								<div>IE 11</div>
+							</div>
+							<div class="flex-center"><img
+									src="https://upload.wikimedia.org/wikipedia/commons/5/52/Safari_browser_logo.svg"
+									class="without-border without-background" style="width: 40px">
+								<div style="width: 30px"></div>
+								<div>Safari 10.1</div>
+							</div>
+							<div class="flex-center"><img
+									src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Microsoft_Edge_logo.svg"
+									class="without-border without-background" style="width: 40px">
+								<div style="width: 30px"></div>
+								<div>Edge 17</div>
+							</div>
+						</ol>
+
+						<img style="width: 550px" src="./images/white/double-download.png" alt="">
+					</div>
 				</section>
 
 				<section style="margin-top: -100px">
@@ -216,19 +220,19 @@
 					<h4>Стек технологий</h4>
 					<div style="text-align: center">
 						<div class="flex-center fragment">
-							<img class="without-border without-background" src="./images/nginx.png" width="40" alt="">
+							<img style="margin-right: 20px" class="without-border without-background" src="./images/nginx.png" width="40" alt="">
 							<span>Nginx</span>
 						</div>
 						<div class="flex-center fragment">
-							<img class="without-border without-background" src="./images/angular_icon.png" width="40" alt="">
+							<img style="margin-right: 20px" class="without-border without-background" src="./images/angular_icon.png" width="40" alt="">
 							<span>Angular</span>
 						</div>
 						<div class="flex-center fragment">
-							<img class="without-border without-background" src="./images/docker.png" width="40" alt="">
+							<img style="margin-right: 20px" class="without-border without-background" src="./images/docker.png" width="40" alt="">
 							<span>Docker</span>
 						</div>
 						<div class="flex-center fragment">
-							<img class="without-border without-background" src="./images/teamcity.png" width="40" alt="">
+							<img style="margin-right: 20px" class="without-border without-background" src="./images/teamcity.png" width="40" alt="">
 							<span>CI system name</span>
 						</div>
 					</div>
@@ -282,7 +286,7 @@
 				</section>
 				<section>
 					<h4><a href="">polyfills.modern.ts</a></h4>
-					<img class="without-border without-background" src="./images/white/polyfills.modern.png" alt="">
+					<img style="width: 500px" class="without-border without-background" src="./images/white/polyfills.modern.png" alt="">
 				</section>
 				<section>
 					<h4><a href="">Dockerfile</a></h4>
@@ -301,16 +305,12 @@
 						</thead>
 						<tbody>
 						<tr>
-							<td class="fragment without-border">условия диктует бизнес</td>
+							<td class="fragment without-border">гибкая настройка</td>
 							<td class="fragment without-border">легко потерять пользователя</td>
 						</tr>
 						<tr>
-							<td class="fragment without-border">гибкая настройка</td>
+							<td class="fragment without-border">параллельная сборка</td>
 							<td class="fragment without-border">сложно включить</td>
-						</tr>
-						<tr class="fragment">
-							<td class="without-border">параллельная сборка</td>
-							<td class="without-border"></td>
 						</tr>
 						<tr class="fragment">
 							<td class="without-border">одна загрузка</td>
@@ -382,7 +382,7 @@
 					<h4>Зачем вы <a href="">это</a> послушали?</h4>
 					<ul>
 						<li class="fragment">вспомнили о проблеме</li>
-						<li class="fragment">вспомнили как решить <a href="">за 1 минуту</a></li>
+						<li class="fragment">вспомнили как решить <a href="">за 1 час</a></li>
 						<li class="fragment">узнали как решить <a href="">за 1 день</a></li>
 					</ul>
 				</section>
